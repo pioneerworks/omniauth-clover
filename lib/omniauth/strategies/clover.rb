@@ -10,8 +10,8 @@ module OmniAuth
       # initializing your consumer from the OAuth gem.
 
       option :client_options, {
-        :authorize_url  => ENV["CLOVER_URL"] + '/oauth/v2/authorize',
-        :token_url      => ENV["CLOVER_API_URL"] + '/oauth/v2/token'
+        :authorize_url  => 'https://apisandbox.dev.clover.com/oauth/v2/authorize',
+        :token_url      => 'https://apisandbox.dev.clover.com/oauth/v2/token'
       }
 
       # option :authorize_options, [:redirect_uri, :response_type, :state]
