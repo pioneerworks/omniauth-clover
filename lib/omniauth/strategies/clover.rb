@@ -10,12 +10,12 @@ module OmniAuth
       # initializing your consumer from the OAuth gem.
 
       option :client_options, {
-        :site           => 'https://www.clover.com',
-        :authorize_url  => '/oauth/authorize',
-        :token_url      => '/oauth/token'
+        :authorize_url  => ENV["CLOVER_URL"] + '/oauth/v2/authorize',
+        :token_url      => ENV["CLOVER_API_URL"] + '/oauth/v2/token'
       }
 
-      option :authorize_options, [:redirect_uri, :response_type, :state]
+      # option :authorize_options, [:redirect_uri, :response_type, :state]
+      option :authorize_params, [:client_id, :redirect_uri]
 
 
       # After successful authentication, client information is returned
